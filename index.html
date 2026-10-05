@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/csc-cribs-preview/favicon.svg" type="image/svg+xml" />
+  <title>CSC Cribs</title>
+  <meta name="description" content="CSC Cribs — Inside your passion. Inside your club. Cribwalks und Cribtalks aus deutschen Cannabis Social Clubs." />
+  <meta name="theme-color" content="#0E0E0E" />
+  <!-- Share previews. og:image must become an absolute URL once the domain is live (see README → Deploy). -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="CSC Cribs" />
+  <meta property="og:title" content="CSC Cribs — Inside your passion. Inside your club." />
+  <meta property="og:description" content="Cribwalks und Cribtalks: echte Einblicke in deutsche Cannabis Social Clubs." />
+  <meta property="og:image" content="https://neda-dvb.github.io/csc-cribs-preview/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Amiri = brand body font. Anton = stand-in for Schabo X Condensed until the licensed file is in /public/fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Anton&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="/csc-cribs-preview/assets/index-04Rwi_qy.js"></script>
+  <link rel="stylesheet" crossorigin href="/csc-cribs-preview/assets/index-B8sA74pc.css">
+</head>
+<body>
+  <!-- Fixed layers: ambient light, depth particles, the 3D viewport, and the 2D HUD -->
+  <div class="ambient" aria-hidden="true"></div>
+  <canvas class="dust" aria-hidden="true"></canvas>
+
+  <main class="viewport">
+    <div class="world">
+
+      <!-- OPENING — the identity in front, the archive already glowing deeper in -->
+      <section class="stage" data-name="Intro" data-glow="#B185BA,#74486B" aria-label="CSC Cribs">
+        <p class="el kicker" data-z="60" style="--y:-30vh">Cribwalk · Cribtalk — Cannabis Social Clubs von innen</p>
+        <h1 class="el logo-mark" data-logo="logo" data-z="0" style="--y:-6vh"></h1>
+        <p class="el hero-line" data-z="20" style="--y:20vh">Inside your passion. <em>Inside your club.</em></p>
+        <p class="el schedule" data-z="10" style="--y:30vh" data-schedule></p>
+        <div class="el leaf-giant" data-logo="leaf" data-z="-1500" style="--x:-30vw;--y:-8vh"></div>
+        <div data-glimpses></div>
+      </section>
+
+      <!-- EPISODES — generated from src/data/episodes.js -->
+      <template data-episodes></template>
+
+      <!-- ARRIVAL -->
+      <section class="stage stage--end" data-name="CSC Cribs" data-glow="#B185BA,#FFD28A" aria-label="Alle Folgen">
+        <div class="el frame frame--final" data-z="700" style="--w:64vw;--h:80vh"><span class="frame__label">Ende / Anfang</span></div>
+        <div class="el leaf-glow" data-logo="leaf" data-z="-700"></div>
+        <p class="el index" data-z="60" style="--y:-32vh" data-count></p>
+        <div class="el end-logo" data-logo="logo" data-z="0" style="--y:-15vh"></div>
+        <p class="el end-line" data-z="-20" style="--y:4vh">Clubs speak. <em>Culture grows.</em></p>
+        <div class="el cta" data-z="-10" style="--y:18vh">
+          <a class="btn" data-channel target="_blank" rel="noopener">Alle Folgen auf YouTube <span aria-hidden="true">↗</span></a>
+          <a class="btn btn--ghost" data-instagram target="_blank" rel="noopener"></a>
+          <a class="btn btn--ghost" data-email>Kontakt</a>
+        </div>
+        <p class="el credits" data-z="-60" style="--y:34vh">Branddesign Den West · Redesign Barrio · © CSC Cribs</p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 2D interface layer -->
+  <header class="hud hud--top">
+    <a class="hud__logo" href="#top" data-logo="logo" aria-label="CSC Cribs — zum Anfang"></a>
+    <nav class="hud__nav" aria-label="Hauptnavigation">
+      <a href="#episodes">Folgen</a>
+      <a data-instagram-short target="_blank" rel="noopener">Instagram</a>
+      <a data-email>Kontakt</a>
+      <a class="hud__pill" data-channel target="_blank" rel="noopener">YouTube ↗</a>
+    </nav>
+  </header>
+  <nav class="depth" aria-label="Episoden"><ol class="depth__list"></ol><span class="depth__cursor"></span></nav>
+  <div class="hud hud--bottom">
+    <p class="hint"><span class="hint__line"></span>Scroll to explore</p>
+    <p class="readout"><span class="readout__stage">01 / 09</span><span class="readout__z">Z 0000</span></p>
+  </div>
+
+  <!-- Scroll length lives here; the engine sizes it -->
+  <div class="scroll-space" aria-hidden="true"></div>
+
+</body>
+</html>
