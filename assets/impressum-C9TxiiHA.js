@@ -1,0 +1,1 @@
+import{t as e}from"./logo-Goh6Jcnu.js";for(let t of document.querySelectorAll(`[data-logo]`))t.innerHTML=e;
